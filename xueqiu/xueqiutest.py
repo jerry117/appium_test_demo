@@ -8,7 +8,6 @@ class xueqiu(unittest.TestCase):
     def test(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
-        # desired_caps['platformVersion'] = '4.4'
         desired_caps['deviceName'] = 'Android Emulator'
         # desired_caps['app'] = PATH('D:/xueqiu_000_05301650.apk')
         desired_caps['appPackage'] = 'com.xueqiu.android'
@@ -24,7 +23,6 @@ class xueqiu(unittest.TestCase):
 
         sleep(3)
         self.driver.find_element_by_xpath('//*[@text="交易"]').click()
-
 
         sleep(5)
         print(self.driver.contexts)
