@@ -23,7 +23,13 @@ class testbanggood(unittest.TestCase):
         time.sleep(5)
         self.driver.find_element_by_xpath("//*[contains(@text,'New User Zone')]").click()
         time.sleep(2)
-        print(self.driver.context)
+        print(self.driver.contexts)
+        print(self.driver.current_context)
+
+        self.driver.switch_to.context('WEBVIEW_com.banggood.client')
+        print(self.driver.contexts)
+        print(self.driver.current_context)
+        time.sleep(5)
         self.driver.quit()
 
 if __name__ == '__main__':
