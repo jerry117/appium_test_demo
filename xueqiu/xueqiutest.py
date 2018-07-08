@@ -24,7 +24,26 @@ class xueqiu(unittest.TestCase):
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
         self.driver.implicitly_wait(5)
 
+        #建议用着四种做定位
+        # self.driver.find_element_by_id()
+        # self.driver.find_element_by_xpath()
+        # self.driver.find_element_by_accessibility_id()   #content-desc 盲人辅助，可以让开发加
+        # self.driver.find_element_by_android_uiautomator()
 
+        #1、APP里的webview控件，必须打开debug模式
+        #2、手机必须是4.4或以上，（Chromedriver）
+        #3、切换到Chromedriver模式以后，【移动端定制】的操作不可用
+        print(self.driver.contexts)
+        webview = self.driver.contexts[1]
+        self.driver.switch_to.content(webview)
+        self.driver.find_element_by_xpath('//')
+
+        #假设APP跳转到了Android view，切记切换回 native_app
+        native = self.driver.contexts[0]
+        self.driver.switch_to.content(native)
+
+
+        #文本定位
         self.driver.find_element_by_xpath('//*[@text="好的"]').click()
 
         sleep(3)
