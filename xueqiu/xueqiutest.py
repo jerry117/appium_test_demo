@@ -13,7 +13,7 @@ class xueqiu(unittest.TestCase):
         desired_caps['appPackage'] = 'com.xueqiu.android'
         desired_caps['appActivity'] = '.view.WelcomeActivityAlias'
         desired_caps['dontStopAppOnReset'] = True
-        desired_caps['NoReset'] =  True
+        # desired_caps['noReset'] =  True
 
         # 输入法
         desired_caps['unicodeKeyboard'] = 'true'  # 支持中文输入，而且不会乱跳
