@@ -12,7 +12,7 @@ class testbanggood(unittest.TestCase):
         desired_caps={}
         desired_caps['platformName']='Android'
         desired_caps['deviceName']='Custom Phone'
-        desired_caps['appPackage'] = 'com.banggood.client'
+        desired_caps['appPackage'] = 'com.xxx.client'
         desired_caps['appActivity'] = '.module.home.MainActivity'
 
         # 输入法
@@ -32,7 +32,7 @@ class testbanggood(unittest.TestCase):
         print(self.driver.contexts)
         print(self.driver.current_context)
 
-        self.driver.switch_to.context('WEBVIEW_com.banggood.client')
+        self.driver.switch_to.context('WEBVIEW_com.xxx.client')
         print(self.driver.contexts)
         print(self.driver.current_context)
         time.sleep(5)
