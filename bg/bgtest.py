@@ -6,7 +6,7 @@ import time
 import unittest
 import os
 
-class testbanggood(unittest.TestCase):
+class testxxx(unittest.TestCase):
 
     def testWebview(self):
         desired_caps={}
