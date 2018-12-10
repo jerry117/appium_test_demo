@@ -39,7 +39,7 @@ class testxxx(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == '__main__':
-    testwebview = testbanggood()
+    testwebview = testxxx()
     testwebview.testWebview()
 
 
